@@ -1,0 +1,46 @@
+/*  Poppins font imported from Google Fonts.    
+    GT Walsheim font does not exist on this service */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;900&display=swap');
+
+:root {
+    --color-primary: hsl(236, 74%, 41%);
+    --color-primary-light-1: hsla(234, 71%, 45%, 0.788);
+    --color-primary-light-2: hsla(234, 71%, 45%, 0.5);
+    --color-primary-dark-1: hsla(234, 88%, 16%, 0.808);
+    --color-primary-dark-2: hsla(234, 88%, 16%, 0.555);
+    --color-primary-opacity: hsla(236, 74%, 41%, 0.658);
+
+    --color-secondary: hsl(358, 100%, 75%);
+    --color-secondary-light-1: hsla(0, 100%, 78%, 0.753);
+    --color-secondary-light-2: hsla(0, 100%, 82%, 0.466);
+
+    --grey: #232323;
+    --grey-light-1: #4C4C4D;
+    --grey-light-2: #C8C8C8;
+
+    --light: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+header {
+    position: absolute;
+}
+
+main {
+    min-height: 100dvh;
+    background-image: url("../images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
