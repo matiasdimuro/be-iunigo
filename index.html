@@ -23,50 +23,104 @@
 
 <body> 
 
-    <header>
-        Header
+    <header class="navbar-nav">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="./images/logo.png" width="150px" height="60px">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#Main">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#QuienesSomos">Quienes somos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#QueEs">Que es</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Pasos">Pasos del proceso</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Beneficios">Beneficios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Testimonios">Testimonios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Sumate">Sumate</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
 
-    <main>
-        Hero
+    <main id="Main">
+        <div class="container text-center gap-3">
+            <div class="row justify-content-center">
+                <div class="col-12 mb-4">
+                    <div class="row justify-content-center">
+                        <div class="Hero_Title col-12">
+                            BE IUNIGO
+                        </div>
+                        <div class="HorizontalBar col-12"></div>
+                    </div>
+                </div>
+                <div class="Hero_Subtitle col-12 mb-4">
+                    Sé parte de nuestro equipo de IT<br id="Hero_Subtitle_Breakline">
+                    mediante el programa de <span class="TextStrong">#talentos</span>
+                </div>
+                <div class="col-12">
+                    <button class="btn">Postulate</button>
+                </div>
+            </div>
+        </div>
+        <div id="HeroColorLayer"></div>
     </main>
 
-    <section>
+    <section id="QuienesSomos" style="height: 300px;">
         Quienes somos?
     </section>
 
-    <section>
+    <section id="Quote1" style="height: 300px;">
         Quote 1
     </section>
 
-    <section>
+    <section id="QueEs" style="height: 300px;">
         Qué es be unigo?
     </section>
 
-    <section>
+    <section id="Pasos" style="height: 300px;">
         Pasos del proceso
     </section>
 
-    <section>
+    <section id="Quote2" style="height: 300px;">
         Quote 2
     </section>
 
-    <section>
+    <section id="QueBuscamos" style="height: 300px;">
         Que buscamos?
     </section>
 
-    <section>
+    <section id="Beneficios" style="height: 300px;">
         Beneficios
     </section>
 
-    <section>
+    <section id="Testimonios" style="height: 300px;">
         Testimonios
     </section>
 
-    <footer>
+    <footer id="Sumate" style="height: 300px;">
         Footer
     </footer>
 
+    <script src="./js/index.js" text="javascript" ></script>
 </body>
 
 </html>
