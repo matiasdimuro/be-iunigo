@@ -19,6 +19,18 @@
     --grey-light-2: #C8C8C8;
 
     --light: #ffffff;
+
+    --size-heading-xl: 48px;
+    --size-subtitle-xl: 32px;
+    --size-text-xl: 18px;
+
+    --size-heading-lg: 38px;
+    --size-subtitle-lg: 22px;
+    --size-text-lg: 14px;
+
+    --size-heading-md: 30px;
+    /* --size-subtitle-md: 22px; */
+    /* --size-text-md: 14px; */
 }
 
 * {
@@ -31,7 +43,8 @@ body {
     position: relative;
 }
 
-
+/* ********************************* */
+/* HEADER & NAVBAR */
 
 header {
     position: fixed;
@@ -71,17 +84,9 @@ header nav .navbar-toggler:focus {
 .headerOnScroll {
     background-color: var(--color-primary-dark-1);
 }
-@media screen and (max-width: 992px) {
-    header {
-        background-color: var(--color-primary-dark-1);
-    }
-    header nav {
-        width: 100%;
-        margin: auto;
-    }
-}
 
-
+/* ********************************* */
+/* MAIN */
 
 main {
     min-height: 100dvh;
@@ -107,28 +112,172 @@ main {
     background-color: var(--color-primary-opacity);
 }
 
+.Hero_Title, .Hero_Subtitle {
+    color: var(--light);
+}
+.Hero_Title {
+    font-size: var(--size-heading-xl);
+    font-weight: 600;
+}
+.Hero_Subtitle {
+    font-size: var(--size-subtitle-xl);
+    font-weight: 400;
+}
+
+/* ********************************* */
+/* QUIENES SOMOS */
+
+#QuienesSomos .QuienesSomos_Headings, #QuienesSomos .QuienesSomos_Description {
+    height: calc(50dvh + 86px);
+}
+
+#QuienesSomos .QuienesSomos_Headings {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    padding-left: 30px; 
+    padding-right: 30px; 
+    background-color: var(--color-primary);
+    color: var(--light);
+    font-size: var(--size-heading-xl);
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-secondary);
+}
+
+#QuienesSomos .QuienesSomos_Headings > :nth-child(2) {
+    align-self: center;
+}
+
+#QuienesSomos .QuienesSomos_Headings > :last-child {
+    position: relative;
+    align-self: end;
+}
+
+#QuienesSomos .QuienesSomos_Headings > :last-child::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    right: 80px;
+    height: 7px;
+    width: 200px;
+    border-radius: 500px;
+    background-color: var(--color-secondary);
+}
+
+#QuienesSomos .QuienesSomos_Description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: var(--size-text-xl);
+}
+
+
+/* ********************************* */
+/* QUOTE 1 */
+
+#Quote1 > .container-fluid {
+    min-height: calc(50dvh + 86px);
+    padding-top: 73px;
+    background-image: url("../images/ciudad.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Quote1 p {
+    font-size: 28px;
+    color: var(--color-primary);
+}
+
+/* **************************************************************** */
+/*  HANDLE RESPONSIVE SIZES */
+/* **************************************************************** */
+
 @media screen and (max-width: 775px) {
     #Hero_Subtitle_Breakline {
         display: none;
     }
 }
 
-.Hero_Title, .Hero_Subtitle {
-    color: var(--light);
+/* < XL */
+@media screen and (max-width: 1200px) {
+    #QuienesSomos .QuienesSomos_Headings {
+        font-size: var(--size-heading-lg);
+    }
+    #QuienesSomos .QuienesSomos_Description {
+        font-size: var(--size-text-lg);
+    }
 }
-.Hero_Title {
-    font-size: 48px;
-    font-weight: 600;
+
+/* < LG */
+@media screen and (max-width: 992px) {
+    header {
+        background-color: var(--color-primary-dark-1);
+    }
+    header nav {
+        width: 100%;
+        margin: auto;
+    }
 }
-.Hero_Subtitle {
-    font-size: 32px;
-    font-weight: 400;
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #QuienesSomos .QuienesSomos_Headings > p {
+        align-self: center !important;
+    }
+    #QuienesSomos .QuienesSomos_Headings > :last-child::after {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* < MD */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #QuienesSomos .QuienesSomos_Headings > p {
+        font-size: var(--size-heading-xl);
+        align-self: center !important;
+    }
+    #QuienesSomos .QuienesSomos_Headings > :last-child::after {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #QuienesSomos .QuienesSomos_Description {
+        font-size: var(--size-text-lg);
+    }
+}
+@media screen and (max-width: 768px) {
+    #Quote1 p br:nth-child(2) {
+        display: inline-block;
+    }
+    #Quote1 p br:nth-child(3) {
+        display: none;
+    }
+}
+
+/* < SM */
+@media screen and (max-width: 576px) {
+    #QuienesSomos .QuienesSomos_Headings > p {
+        font-size: var(--size-heading-md);
+        align-self: center !important;
+    }
+    #QuienesSomos .QuienesSomos_Headings > :last-child::after {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #Quote1 > .container-fluid {
+        padding-top: 30px;
+    }
 }
 
 /* **************************************************************** */
 /*  En reemplazo a: scroll-margin-top: 90px !important;
     Pareciera presentar problemas de compatibilidad con Bootstrap. */
-/* **************************************************************** */
 
 #QuienesSomos::before,
 #QueEs::before,
