@@ -38,6 +38,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    list-style: none;
 }
 body {
     position: relative;
@@ -127,22 +128,12 @@ main {
 /* ********************************* */
 /* QUIENES SOMOS */
 
-#QuienesSomos .QuienesSomos_Headings, #QuienesSomos .QuienesSomos_Description {
-    height: calc(50dvh + 86px);
-}
 
 #QuienesSomos .QuienesSomos_Headings {
-    display: flex; 
     flex-direction: column; 
     justify-content: center;
     padding-left: 30px; 
-    padding-right: 30px; 
-    background-color: var(--color-primary);
-    color: var(--light);
-    font-size: var(--size-heading-xl);
-    font-weight: bold;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--color-secondary);
+    padding-right: 30px;  
 }
 
 #QuienesSomos .QuienesSomos_Headings > :nth-child(2) {
@@ -190,6 +181,57 @@ main {
     color: var(--color-primary);
 }
 
+/* ********************************* */
+/* QUE ES */
+
+.QueEs_Heading {
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.QueEs_Heading p {
+    position: relative;
+}
+
+.QueEs_Heading p::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 200px;
+    border-radius: 500px;
+    background-color: var(--color-secondary);
+}
+
+.QueEs_Items ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.QueEs_Items ul li {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.QueEs_Items ul li p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--color-primary-dark-1);
+}
+
+.QueEs_Items img {
+    width: 95px;
+    height: 95px;
+    margin-right: 20px;
+}
+
 /* **************************************************************** */
 /*  HANDLE RESPONSIVE SIZES */
 /* **************************************************************** */
@@ -231,6 +273,21 @@ main {
         left: 50%;
         transform: translateX(-50%);
     }
+    .QueEs_Heading {
+        font-size: var(--size-heading-md) !important;
+    }
+    .QueEs_Items img {
+        width: 75px;
+        height: 75px;
+    }
+    .QueEs_Items ul li p {
+        font-size: var(--size-text-xl);
+    }
+    .QueEs_Heading p::after {
+        bottom: -15px;
+        transform: translateX(-50%);
+        width: 160px;
+    }
 }
 
 /* < MD */
@@ -255,6 +312,19 @@ main {
     }
     #Quote1 p br:nth-child(3) {
         display: none;
+    }
+    .QueEs_Items img {
+        width: 75px;
+        height: 75px;
+    }
+    .QueEs_Items ul li p {
+        text-align: center;
+        font-size: var(--size-text-xl);
+    }
+    .QueEs_Heading p::after {
+        bottom: -15px;
+        transform: translateX(-50%);
+        width: 160px;
     }
 }
 
@@ -296,6 +366,20 @@ main {
 /* ======================== */
 /* REUSABILITY CLASSES */
 /* ======================== */
+
+.Mosaic {
+    height: calc(50dvh + 86px);
+}
+
+.MosaicHeadings {
+    display: flex; 
+    background-color: var(--color-primary);
+    color: var(--light);
+    font-size: var(--size-heading-xl);
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-secondary);
+}
 
 .HorizontalBar {
     width: 154px;
