@@ -130,7 +130,6 @@ main {
 /* QUOTE 1 */
 
 #Quote1 > .container-fluid {
-    min-height: calc(50dvh + 86px);
     padding-top: 73px;
     background-image: url("../images/ciudad.jpg");
     background-position: center center;
@@ -199,14 +198,39 @@ main {
 .Pasos_Items ul li p {
     margin-bottom: 0;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 25px;
     color: var(--color-primary-dark-1);
 }
 
 .Pasos_Items img {
-    width: 95px;
-    height: 95px;
+    width: 85px;
+    height: 85px;
     margin-right: 20px;
+}
+
+/* ********************************* */
+/* QUOTE 2 */
+
+#Quote2 {
+    font-size: var(--size-heading-lg);
+    color: var(--color-primary);
+    background-color: #f1f1f1;
+}
+
+#Quote2 img {
+    width: 300px;
+}
+
+#Quote2 p::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 130px;
+    border-radius: 500px;
+    background-color: var(--color-secondary);
 }
 
 /* **************************************************************** */
@@ -226,6 +250,10 @@ main {
     }
     .Mosaic_Description {
         font-size: var(--size-text-lg);
+    }
+    .Pasos_Items img {
+        width: 65px;
+        height: 65px;
     }
 }
 
@@ -292,13 +320,18 @@ main {
         height: 75px;
     }
     .Pasos_Items ul li p {
-        /* text-align: center; */
         font-size: var(--size-text-xl);
     }
     .Pasos_Heading p::after {
         bottom: -15px;
         transform: translateX(-50%);
         width: 160px;
+    }
+    #Quote2 p::after {
+        width: 180px;
+    }
+    #Quote2 img {
+        width: 250px;
     }
 }
 
