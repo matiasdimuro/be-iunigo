@@ -26,7 +26,7 @@
 
     --size-heading-lg: 38px;
     --size-subtitle-lg: 22px;
-    --size-text-lg: 14px;
+    --size-text-lg: 15px;
 
     --size-heading-md: 30px;
     /* --size-subtitle-md: 22px; */
@@ -48,20 +48,12 @@ body {
 /* HEADER & NAVBAR */
 
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: transparent;
+    background-color: transparent; 
     transition: background-color 0.3s;
     z-index: 100;
 }
 header nav {
     width: 90%;
-    margin: auto;
-    background-color: none;
-}
-header nav .navbar-nav {
-    margin-left: auto;
 }
 
 header nav .nav-link {
@@ -99,18 +91,7 @@ main {
     display: flex;
     align-items: center;
     position: relative;
-
     z-index: 50;
-}
-
-#HeroColorLayer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -50;
-    background-color: var(--color-primary-opacity);
 }
 
 .Hero_Title, .Hero_Subtitle {
@@ -128,21 +109,9 @@ main {
 /* ********************************* */
 /* QUIENES SOMOS */
 
-
 #QuienesSomos .QuienesSomos_Headings {
-    flex-direction: column; 
-    justify-content: center;
     padding-left: 30px; 
     padding-right: 30px;  
-}
-
-#QuienesSomos .QuienesSomos_Headings > :nth-child(2) {
-    align-self: center;
-}
-
-#QuienesSomos .QuienesSomos_Headings > :last-child {
-    position: relative;
-    align-self: end;
 }
 
 #QuienesSomos .QuienesSomos_Headings > :last-child::after {
@@ -154,13 +123,6 @@ main {
     width: 200px;
     border-radius: 500px;
     background-color: var(--color-secondary);
-}
-
-#QuienesSomos .QuienesSomos_Description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: var(--size-text-xl);
 }
 
 
@@ -184,17 +146,35 @@ main {
 /* ********************************* */
 /* QUE ES */
 
-.QueEs_Heading {
-    justify-content: center;
-    align-items: center;
+#QueEs .MosaicHeadings {
+    background-image: url("../images/que-es.JPG");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    z-index: 50;
+}
+
+#QueEs .MosaicHeadings > p::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 130px;
+    border-radius: 500px;
+    background-color: var(--color-secondary);
+}
+
+/* ********************************* */
+/* PASOS */
+
+.Pasos_Heading {
     height: fit-content;
 }
 
-.QueEs_Heading p {
-    position: relative;
-}
-
-.QueEs_Heading p::after {
+.Pasos_Heading p::after {
     content: "";
     position: absolute;
     bottom: -30px;
@@ -206,27 +186,24 @@ main {
     background-color: var(--color-secondary);
 }
 
-.QueEs_Items ul {
+.Pasos_Items ul {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
-.QueEs_Items ul li {
+.Pasos_Items ul li {
     display: flex;
     align-items: center;
     padding-right: 30px;
 }
 
-.QueEs_Items ul li p {
+.Pasos_Items ul li p {
     margin-bottom: 0;
     font-weight: 400;
     font-size: 28px;
     color: var(--color-primary-dark-1);
 }
 
-.QueEs_Items img {
+.Pasos_Items img {
     width: 95px;
     height: 95px;
     margin-right: 20px;
@@ -247,7 +224,7 @@ main {
     #QuienesSomos .QuienesSomos_Headings {
         font-size: var(--size-heading-lg);
     }
-    #QuienesSomos .QuienesSomos_Description {
+    .Mosaic_Description {
         font-size: var(--size-text-lg);
     }
 }
@@ -264,6 +241,9 @@ main {
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
+    #QuienesSomos .Mosaic_Description {
+        font-size: var(--size-text-lg);
+    }
     #QuienesSomos .QuienesSomos_Headings > p {
         align-self: center !important;
     }
@@ -273,17 +253,17 @@ main {
         left: 50%;
         transform: translateX(-50%);
     }
-    .QueEs_Heading {
+    .Pasos_Heading {
         font-size: var(--size-heading-md) !important;
     }
-    .QueEs_Items img {
+    .Pasos_Items img {
         width: 75px;
         height: 75px;
     }
-    .QueEs_Items ul li p {
+    .Pasos_Items ul li p {
         font-size: var(--size-text-xl);
     }
-    .QueEs_Heading p::after {
+    .Pasos_Heading p::after {
         bottom: -15px;
         transform: translateX(-50%);
         width: 160px;
@@ -302,26 +282,20 @@ main {
         left: 50%;
         transform: translateX(-50%);
     }
-    #QuienesSomos .QuienesSomos_Description {
+    .Mosaic_Description {
         font-size: var(--size-text-lg);
     }
 }
 @media screen and (max-width: 768px) {
-    #Quote1 p br:nth-child(2) {
-        display: inline-block;
-    }
-    #Quote1 p br:nth-child(3) {
-        display: none;
-    }
-    .QueEs_Items img {
+    .Pasos_Items img {
         width: 75px;
         height: 75px;
     }
-    .QueEs_Items ul li p {
-        text-align: center;
+    .Pasos_Items ul li p {
+        /* text-align: center; */
         font-size: var(--size-text-xl);
     }
-    .QueEs_Heading p::after {
+    .Pasos_Heading p::after {
         bottom: -15px;
         transform: translateX(-50%);
         width: 160px;
@@ -367,8 +341,19 @@ main {
 /* REUSABILITY CLASSES */
 /* ======================== */
 
+.PrimaryColorLayer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -50;
+    background-color: var(--color-primary-opacity);
+}
+
 .Mosaic {
-    height: calc(50dvh + 86px);
+    min-height: calc(50dvh + 86px);
+    padding: 1.5rem;
 }
 
 .MosaicHeadings {
@@ -379,6 +364,13 @@ main {
     font-weight: bold;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--color-secondary);
+}
+
+.Mosaic_Description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: var(--size-text-xl);
 }
 
 .HorizontalBar {

@@ -21,19 +21,22 @@
     <title>▷ Be Iúnigo</title>
 </head>
 
-<body> 
+<body > 
 
-    <header class="navbar-nav">
-        <nav class="navbar navbar-expand-lg">
+    <header class="navbar-nav position-fixed top-0 container-fluid">
+        <nav class="navbar navbar-expand-lg m-auto">
             <div class="container-fluid">
+              <!-- Logo -->
               <a class="navbar-brand" href="#">
                 <img src="./images/logo.png" width="150px" height="60px">
               </a>
+              <!-- Toggle button -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
+              <!-- Links -->
               <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#Main">Home</a>
                   </li>
@@ -81,18 +84,20 @@
                 </div>
             </div>
         </div>
-        <div id="HeroColorLayer"></div>
+        <div class="PrimaryColorLayer"></div>
     </main>
 
     <section id="QuienesSomos">
       <div class="container-fluid">
         <div class="row">
-          <div class="Mosaic MosaicHeadings QuienesSomos_Headings col-12 col-md-6">
-            <p>¿Quiénes somos?</p>
-            <p>¿Qué hacemos?</p>
-            <p>¿Cómo vivimos?</p>
+          <!-- FIRST MOSAIC -->
+          <div class="Mosaic MosaicHeadings QuienesSomos_Headings col-12 col-md-6 flex-column justify-content-center px-">
+            <p class="align-self-start">¿Quiénes somos?</p>
+            <p class="align-self-center">¿Qué hacemos?</p>
+            <p class="position-relative align-self-center align-self-md-end">¿Cómo vivimos?</p>
           </div>
-          <div class="Mosaic QuienesSomos_Description col-12 col-md-6 text-center">
+          <!-- SECOND MOSAIC -->
+          <div class="Mosaic Mosaic_Description col-12 col-md-6 text-center">
             <p>
               Somos la <span class="TextStrong">nueva</span> startup de seguros, una <span class="TextStrong">insuretech</span> de rápido crecimiento. Somos un equipo de profesionales muuuy diferentes. 
             </p>
@@ -117,8 +122,8 @@
       <div class="container-fluid">
         <p class="text-center TextStrong">
           "No es lo que tenés,<br>
-          sino cómo usas lo que tenés <br style="display: none;">
-          lo que marca la <br> diferencia."
+          sino cómo usas lo que tenés <br class="d-inline-block d-md-none">
+          lo que marca la <br class="d-none d-md-inline"> diferencia."
         </p>
       </div>
     </section>
@@ -126,13 +131,36 @@
     <section id="QueEs">
       <div class="container-fluid">
         <div class="row">
-          <div class="Mosaic MosaicHeadings QueEs_Heading col-12 col-md-6">
-            <p>
+          <!-- FIRST MOSAIC -->
+          <div class="Mosaic Mosaic_Description col-12 col-md-6 order-last order-md-first">
+            <p class="text-center">
+              Es el <span class="TextStrong">programa</span> de desarrollo para programadores <span class="TextStrong">Front-end</span>, <span class="TextStrong">Back-end</span> y <span class="TextStrong">stack</span> en nuestro equipo IT.<br><br>
+              Nuestros equipos están compuestos por células multidisciplinarias, conformado por 8 personas donde en cada uno de ellos participan programadores. Al participar en uno de estos equipos tendrás trainings y capacitaciones y el desafío de innovar!
+            </p>
+          </div>
+          <!-- SECOND MOSAIC -->
+          <div class="Mosaic MosaicHeadings position-relative d-flex justify-content-center align-items-center col-12 col-md-6 order-first order-md-last">
+            <p class="position-relative text-center">
+              Qué es <br>Be Iúnigo?
+            </p>
+            <div class="PrimaryColorLayer"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Pasos">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- FIRST MOSAIC -->
+          <div class="Mosaic MosaicHeadings Pasos_Heading justify-content-center align-items-center col-12 col-md-6">
+            <p class="position-relative">
               Pasos del proceso
             </p>
           </div>
-          <div class="Mosaic QueEs_Items col-12 col-md-6">
-            <ul>
+          <!-- SECOND MOSAIC -->
+          <div class="Mosaic Pasos_Items col-12 col-md-6">
+            <ul class="d-flex flex-column justify-content-evenly">
               <li>
                 <img src="./images/inscripcion.png" alt="Logo Inscripcion">
                 <p>Inscripción</p>
@@ -153,10 +181,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section id="Pasos" style="height: 300px;">
-        Pasos del proceso
     </section>
 
     <section id="Quote2" style="height: 300px;">
