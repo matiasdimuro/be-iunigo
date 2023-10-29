@@ -29,6 +29,9 @@
     --size-text-lg: 15px;
 
     --size-heading-md: 30px;
+    --size-text-md: 15px;
+    
+    --size-text-sm: 12px;
     /* --size-subtitle-md: 22px; */
     /* --size-text-md: 14px; */
 }
@@ -214,7 +217,7 @@ main {
 #Quote2 {
     font-size: var(--size-heading-lg);
     color: var(--color-primary);
-    background-color: #f1f1f1;
+    background-color: #f8f8f8;
 }
 
 #Quote2 img {
@@ -231,6 +234,136 @@ main {
     width: 130px;
     border-radius: 500px;
     background-color: var(--color-secondary);
+}
+
+/* *************************************** */
+/* QUE BUSCAMOS */
+
+#QueBuscamos .col-12:first-child {
+    font-size: var(--size-heading-lg);
+    color: var(--color-primary);
+}
+
+#QueBuscamos .col-12:nth-child(2) {
+    width: 800px;
+    font-size: var(--size-text-xl);
+}
+
+#QueBuscamos .col-12:last-child {
+    width: 400px;
+    font-size: var(--size-text-xl);
+    font-weight: 600;
+}
+
+#QueBuscamos .col-12:last-child div::before {
+    content: attr(data-index) "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+    color: var(--color-secondary);
+    font-size: 20px;
+}
+
+/* ************************************************** */
+/* BENEFICIOS */
+
+#Beneficios .Mosaic:last-child {
+    background-image: url("../images/beneficios.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 50;
+}
+
+#Beneficios .Mosaic:first-child p {
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+#Beneficios .Mosaic:first-child {
+    padding-left: 70px;
+}
+
+#Beneficios .Mosaic:first-child p::before {
+    content: attr(data-index) "";
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    transform: translateY(-50%);
+    color: var(--color-secondary);
+    font-size: 25px;
+}
+
+#Beneficios .Mosaic:last-child p::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 170px;
+    border-radius: 500px;
+    background-color: var(--color-secondary);
+}
+
+/* ************************************************** */
+/* TESTIMONIOS */
+
+#Testimonios .Mosaic:first-child p::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 170px;
+    border-radius: 500px;
+    background-color: var(--color-secondary);
+}
+
+.carousel-indicators {
+    bottom: -40px !important;
+}
+
+.carousel-indicators button {
+    height: 8px !important;
+    width: 50px !important;
+    background-color: var(--color-secondary) !important;
+}
+
+.border-secondary {
+    border: 3px solid var(--color-secondary) !important;
+    border-radius: 30px;
+}
+
+/* ************************************************** */
+/* SUMATE */
+
+#Sumate {
+    position: relative;
+    min-height: 300px;
+    
+    background-image: url("../images/footer.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    text-align: center;
+    z-index: 50;
+}
+
+#Sumate p {
+    color: var(--light);
+}
+
+#Sumate > div > p {
+    font-size: var(--size-heading-lg);
+    text-transform: uppercase;
+}
+
+#Sumate > p {
+    font-size: var(--size-text-md);
 }
 
 /* **************************************************************** */
@@ -296,6 +429,9 @@ main {
         transform: translateX(-50%);
         width: 160px;
     }
+    #Beneficios .Mosaic:first-child {
+        padding-left: 50px;
+    }
 }
 
 /* < MD */
@@ -333,6 +469,12 @@ main {
     #Quote2 img {
         width: 250px;
     }
+    #Beneficios .Mosaic:first-child {
+        padding-left: 70px;
+    }
+    #Beneficios .Mosaic:first-child p {
+        font-size: 20px;
+    }
 }
 
 /* < SM */
@@ -349,6 +491,12 @@ main {
     }
     #Quote1 > .container-fluid {
         padding-top: 30px;
+    }
+    #Sumate > div > p {
+        font-size: var(--size-heading-md);
+    }
+    #Sumate > p {
+        font-size: var(--size-text-sm);
     }
 }
 
