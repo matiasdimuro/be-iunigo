@@ -96,9 +96,6 @@ header nav .navbar-toggler {
 header nav .navbar-toggler:focus {
     box-shadow: 0 0 0 0.1rem var(--light) !important;
 }
-.headerOnScroll {
-    background-color: var(--color-primary-dark-1);
-}
 
 /* ********************************* */
 /* MAIN */
@@ -614,4 +611,47 @@ main {
     background-color: transparent ;
     font-weight: 600 ;
     color: var(--color-secondary) !important;
+}
+
+/* ********************** */
+/* ANIMATION CLASSES (w/JS) */
+
+.headerOnScroll {
+    background-color: var(--color-primary-dark-1);
+}
+
+.Animation-LeftToRight {
+    position: relative !important;
+    left: 0 !important;
+    opacity: 1;
+    transition: all .8s ease-out !important;
+}
+.BeforeAnimation-LeftToRight {
+    position: relative !important;
+    opacity: 0;
+    left: -50px !important;
+}
+
+.Animation-RightToLeft {
+    position: relative !important;
+    right: 0 !important;
+    opacity: 1;
+    transition: all .8s ease-out !important;
+}
+.BeforeAnimation-RightToLeft {
+    position: relative !important;
+    opacity: 0;
+    right: -50px !important;
+}
+
+.Animation-TopToBottom {
+    position: relative !important;
+    top: 0 !important;
+    opacity: 1;
+    transition: all .8s ease-out !important;
+}
+.BeforeAnimation-TopToBottom {
+    position: relative !important;
+    opacity: 0;
+    top: -50px !important;
 }
