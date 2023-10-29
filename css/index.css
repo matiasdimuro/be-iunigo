@@ -42,9 +42,28 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     list-style: none;
+    /* Work in Mozilla */
+    scrollbar-color: var(--light) var(--color-primary-light-2);
 }
 body {
     position: relative;
+    overflow-x: hidden;
+}
+/* Works on Chrome, Safari and Edge */
+body::-webkit-scrollbar-track {
+    background-color: var(--color-primary-light-2);
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--light); /* Color del control deslizante */
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-primary-light-2); /* Color del control deslizante */
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: var(--color-primary-light-2); /* Color del control deslizante */
 }
 
 /* ********************************* */
@@ -488,6 +507,10 @@ main {
         bottom: -30px;
         left: 50%;
         transform: translateX(-50%);
+    }
+    #QueBuscamos .col-12:last-child {
+        width: 350px;
+        margin-left: 20px;
     }
     #Quote1 > .container-fluid {
         padding-top: 30px;
